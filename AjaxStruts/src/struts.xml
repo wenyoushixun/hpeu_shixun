@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="default-package" extends="struts-default, json-default">
+		<!-- 商品类别列表 -->
+		<action name="category" class="online.shixun.hpeu.action.GoodsCategoryAction" method="list">
+			<result name="success">/WEB-INF/views/category.jsp</result>
+		</action>
+		
+		<!-- 商品列表 -->
+		<action name="goods" class="online.shixun.hpeu.action.GoodsAction" method="list">
+			<result name="success">/WEB-INF/views/goods.jsp</result>
+		</action>
+		
+		<!-- 商品描述 -->
+		<action name="description" class="online.shixun.hpeu.action.GoodsAction" method="description">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>
