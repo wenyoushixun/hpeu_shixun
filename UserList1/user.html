@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="plugins/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+    <title>user-form</title>
+</head>
+<body>
+    <div id="container">
+        <table>
+            <header>
+                <div class="logo"></div>
+                <div class="text">用户管理系统</div>
+                <div class="exit">
+                    <a href="">帮助</a>
+                    <a href="">退出</a>
+                </div>
+            </header>
+            <div class="body">
+                <div class="left-list">
+                    <div class="menu">
+                        <div class="menu-one">用户查询</div>
+                        <div class="menu-two">用户新增</div>
+                    </div>
+                    <div class="images">
+                        <div class="empty"></div>
+                        <div class="ima"></div>
+                        <div class="tag">当前用户登录</div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="edit">新增&编辑用户信息</div>
+                    <div class="input-group">
+                        <form>
+                            <label>用户名称：</label>
+                            <input type="text" name="" class="inputname" placeholder="请输入你的用户名！">
+                            <br>
+                            <label>登录密码：</label>
+                            <input type="text" name="" class="inputpasswold" placeholder="请输入你的密码！">
+                            <br>
+                            <label>重复密码：</label>
+                            <input type="text" name="" class="inputrepasswold" placeholder="请输入你的确认密码！">
+                            <br>
+                            <label>电子邮箱：</label>
+                            <input type="email" name="" class="inputmail" placeholder="请输入你的邮箱！">
+                            <br>
+                            <label>性别：</label>
+                            <input type="radio" name="gender" value="male" class="radio-tag">男
+                            <input type="radio" name="gender" value="female" class="radio-tag">女
+                            <hr>
+                        </form>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">保存</button>
+                        <button type="reset">重置</button>
+                        <button type="button">返回</button>
+                    </div>
+                </div>
+            </div>
+        </table>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+
+        //页面跳转
+        $("#container .body .left-list .menu .menu-one").click(function() {
+            location.href = 'userList.html';
+        });
+
+        //验证
+        $("button:submit").on("click", function() {
+            if ($(".inputname").val() == "") {
+                alert("用户名不能为空！");
+                return false;
+            }
+            if ($(".inputname").val().length < 6 || $(".inputname").val().length > 20) {
+                alert("用户名在6-20之间！");
+                return false;
+            }
+            if ($(".inputpasswold").val() == "") {
+                alert("密码不能为空！");
+                return false;
+            }
+            if ($(".inputpasswold").val().length < 6 || $(".inputname").val().length > 20) {
+                alert("密码在6-20之间！");
+                return false;
+            }
+            if ($(".inputrepasswold").val() == "") {
+                alert("确认密码不能为空！");
+                return false;
+            }
+            if ($(".inputpasswold").val() != $(".inputrepasswold").val()) {
+                alert("两次密码不一致！");
+                return false;
+            }
+            if ($(".inputmail").val() == "") {
+                alert("邮箱不能为空！");
+                return false;
+            }
+        });
+
+        //重置
+        $("button:reset").on("click", function() {
+
+            $(".inputname").val("");
+            $(".inputpasswold").val("");
+            $(".inputrepasswold").val("");
+            $(".inputmail").val("");
+        });
+
+    });
+    </script>
+</body>
+
+</html>

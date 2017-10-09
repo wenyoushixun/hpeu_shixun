@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>user-list</title>
+    <link rel="stylesheet" type="text/css" href="css/userList.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div class="logo"></div>
+            <div class="text">用户管理系统</div>
+            <div class="exit">
+                <a href="">帮助</a>
+                <a href="">退出</a>
+            </div>
+        </header>
+        <div class="body">
+            <div class="left-list">
+                <div class="menu">
+                    <div class="menu-one">用户查询</div>
+                    <div class="menu-two">用户新增</div>
+                </div>
+                <div class="images">
+                    <div class="empty"></div>
+                    <div class="ima"></div>
+                    <div class="tag">当前用户登录</div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="input">
+                    <input type="text" name="">
+                    <button>查询</button>
+                </div>
+                <div>
+                    <table cellpadding="0" cellpadding="0">
+                        <tr>
+                            <th>
+                                <input type="checkbox" name="" class="checkbox-all">用户名称</th>
+                            <th class="th1">职业</th>
+                            <th class="th2" height="">邮箱</th>
+                            <th class="th3">性别</th>
+                            <th class="th4">特长</th>
+                            <th class="th5">操作</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkbox">轻实训</td>
+                            <td>全金属</td>
+                            <td>tiger@shixun.com</td>
+                            <td>男</td>
+                            <td>书法</td>
+                            <td>
+                                <button>编辑</button>
+                                <button>删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkbox">轻实训</td>
+                            <td>全金属</td>
+                            <td>tiger@shixun.com</td>
+                            <td>男</td>
+                            <td>书法</td>
+                            <td>
+                                <button>编辑</button>
+                                <button>删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkbox">轻实训</td>
+                            <td>全金属</td>
+                            <td>tiger@shixun.com</td>
+                            <td>男</td>
+                            <td>书法</td>
+                            <td>
+                                <button>编辑</button>
+                                <button>删除</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="plugins/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        $("#container .body .left-list .menu .menu-two").click(function() {
+            location.href = 'user.html';
+        });
+
+        //单击时全选
+        $(".checkbox-all").on("click", function() {
+            var $this = $(this);
+            $("input[name='checkbox']").prop("checked", $this.prop("checked"));
+        });
+
+    });
+    </script>
+</body>
+
+</html>

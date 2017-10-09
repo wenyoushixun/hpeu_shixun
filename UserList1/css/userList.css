@@ -1,0 +1,148 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border: 0;
+    position: relative;
+    background-color: rgba(245, 245, 245, .5);
+}
+
+#container header {
+    width: 100%;
+    height: 12%;
+    position: relative;
+    background-color: #4d98c1;
+}
+
+#container header .logo {
+    height: 100%;
+    width: 10%;
+    background-image: url("../images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#container header .text {
+    width: 20%;
+    height: 100%;
+    float: left;
+    line-height: 70px;
+    text-align: left;
+    font-size: 20px;
+}
+
+#container header .exit {
+    width: 20%;
+    height: 100%;
+    float: right;
+    line-height: 70px;
+    text-align: center;
+}
+
+#container header .exit a {
+    text-decoration-line: none;
+}
+
+#container .body {
+    float: left;
+    height: 88%;
+    width: 100%;
+}
+
+#container .body .left-list {
+    height: 100%;
+    width: 10%;
+    float: left;
+    background-color: #eff0ef;
+}
+
+#container .body .right-content {
+    height: 100%;
+    width: 90%;
+    float: left;
+}
+
+#container .body .left-list .menu {
+    height: 13%;
+    width: 100%;
+    text-align: center;
+}
+
+#container .body .left-list .images {
+    height: 87%;
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+
+#container .body .left-list .menu .menu-one {
+    height: 50%;
+    width: 100%;
+    line-height: 40px;
+    border-bottom: 2px solid #ccc;
+}
+
+#container .body .left-list .menu .menu-two {
+    height: 50%;
+    width: 100%;
+    line-height: 40px;
+    border-bottom: 2px solid #ccc;
+}
+
+#container .body .left-list .menu .menu-one:hover,
+#container .body .left-list .menu .menu-two:hover {
+    background-color: #cecdce;
+    cursor: pointer;
+}
+
+#container .body .left-list .images .empty {
+    height: 70%;
+    width: 100%
+}
+
+#container .body .left-list .images .ima {
+    height: 20%;
+    width: 100%;
+    background-image: url("../images/lo.png");
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: contain;
+}
+
+#container .body .left-list .images .tag {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    float: bottom;
+}
+
+#container .body .right-content .input {
+    margin: 20px 50px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #d6dada;
+    border-collapse: collapse;
+}
+
+table tr th,
+table tr td {
+    height: 40px;
+    border: 1px solid #d6dada;
+    border-collapse: collapse;
+}
