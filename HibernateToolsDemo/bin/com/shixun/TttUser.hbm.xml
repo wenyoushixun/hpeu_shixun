@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-19 11:08:25 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.shixun.TttUser" table="ttt_user" catalog="db_user" optimistic-lock="version">
+        <composite-id name="id" class="com.shixun.TttUserId">
+            <key-property name="user" type="string">
+                <column name="user" length="20" />
+            </key-property>
+            <key-property name="balance" type="java.lang.Integer">
+                <column name="balance" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

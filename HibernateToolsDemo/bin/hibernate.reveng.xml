@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="db_user" match-name="HT_db_user"/>
+  <table-filter match-catalog="db_user" match-name="HT_tt_user"/>
+  <table-filter match-catalog="db_user" match-name="t_user"/>
+  <table-filter match-catalog="db_user" match-name="tt_user"/>
+  <table-filter match-catalog="db_user" match-name="ttt_user"/>
+</hibernate-reverse-engineering>
