@@ -1,0 +1,63 @@
+#all {
+	height: 660px;
+	width: 750px;
+	background-image: url("../images/1.jpg");
+	margin: 0 auto;
+	border-radius: 30px;
+}
+
+#container {
+	height: 550px;
+	width: 600px;
+	border-radius: 20px;
+	position: relative;
+	top: 35px;
+	margin: 0 auto;
+	background-color: rgba(240, 240, 240, .8);
+}
+
+img {
+	width: 60px;
+	height: 60px;
+	position: relative;
+	top: 15px;
+}
+
+#container header {
+	height: 20%;
+	text-align: center;
+	line-height: 120px;
+}
+
+#container form {
+	height: 80%;
+	text-indent: 8em;
+}
+
+#container form .forms {
+	height: 10%;
+}
+
+.profession, .input {
+	width: 260px;
+	height: 28px;
+}
+
+.button {
+	width: 100px;
+	height: 35px;
+}
+
+#all footer {
+	text-align: center;
+	position: relative;
+	top: 50px;
+}
+
+select {
+	width: 260px;
+}
+
+.hobby {
+	vertical-align: middle;
+}

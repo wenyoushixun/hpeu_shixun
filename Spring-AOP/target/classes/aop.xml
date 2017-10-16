@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
+	<!-- bean配置 -->
+	<bean id="helloWorldImpl1" class="com.qingshixun.project.aop.impl.HelloWorldImpl1" />
+	<bean id="helloWorldImpl2" class="com.qingshixun.project.aop.impl.HelloWorldImpl2" />
+	<bean id="aspectProcess" class="com.qingshixun.project.AspectProcess" />
+
+	<!-- AOP配置 -->
+	<!-- <aop:config> <aop:aspect id="aspect" ref="aspectProcess"> <aop:pointcut 
+		id="addAllMethod" expression="execution(* com.qingshixun.project.aop.HelloWorld.*(..))" 
+		/> <aop:before method="before" pointcut-ref="addAllMethod" /> <aop:after-returning 
+		method="afterReturning" pointcut-ref="addAllMethod" returning="value" /> 
+		<aop:after method="process" pointcut-ref="addAllMethod" /> <aop:around method="around" 
+		pointcut-ref="addAllMethod" /> <aop:after-throwing method="throwing" pointcut-ref="addAllMethod" 
+		throwing="ex"/> </aop:aspect> </aop:config> -->
+
+	 <!-- 注解扫描包 -->
+	<!--<context:component-scan base-package="com.qingshixun.project" /> -->
+	<!-- 开启 AOP 注解 -->
+	<aop:aspectj-autoproxy />
+
+</beans>       

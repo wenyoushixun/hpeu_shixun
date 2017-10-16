@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="user" class="com.qingshixun.Ioc.User">
+
+		<property name="name" value="lisi" />
+		<property name="age" value="18" />
+		<!-- collaborators and configuration for this bean go here -->
+	</bean>
+
+	<!-- more bean definitions go here -->
+	<bean name="bean1" class="com.qingshixun.bean.Bean1"></bean>
+
+	<bean name="bean2" class="com.qingshixun.bean.Bean2factory"
+		factory-method="createBean2"></bean>
+
+	<bean name="bean3factory" class="com.qingshixun.bean.Bean3factory"></bean>
+	<bean name="bean3" factory-bean="bean3factory" factory-method="createBean3"></bean>
+
+	<!-- 构造器注入 -->
+	<bean name="dog1" class="com.qingshixun.di.Dog">
+		<constructor-arg index="0" value="小白"></constructor-arg>
+		<constructor-arg index="1" value="3"></constructor-arg>
+	</bean>
+
+	<!-- set方法注入 -->
+	<bean name="dog2" class="com.qingshixun.di.Dog">
+		<property name="name" value="小黑"></property>
+		<property name="age" value="4"></property>
+	</bean>
+
+	<bean name="person" class="com.qingshixun.di.Person">
+		<property name="name" value="wenyou"></property>
+		<property name="dog" ref="dog2"></property>
+	</bean>
+
+	<bean name="collectionBean" class="com.qingshixun.gather.CollectionBean">
+		<property name="list">
+			<list>
+				<value>张三</value>
+				<value>111</value>
+				<ref bean="person" />
+			</list>
+		</property>
+
+		<property name="set">
+			<set>
+				<value>李四</value>
+				<value>111</value>
+				<ref bean="dog1" />
+			</set>
+		</property>
+
+		<property name="map">
+			<map>
+				<entry key="name" value="王五"></entry>
+				<entry key-ref="dog1" value-ref="dog2"></entry>
+			</map>
+		</property>
+
+		<property name="props">
+			<props>
+				<prop key="username">root</prop>
+				<prop key="password">123456</prop>
+			</props>
+		</property> 
+	</bean>
+	
+	<!-- <bean name="set" class="com.qingshixun.gather.CollectionBean">
+		<property name="set">
+			<set>
+				<value>李四</value>
+				<value>111</value>
+				<ref bean="dog1" />
+			</set>
+		</property>
+	</bean>
+	
+	<bean name="map" class="com.qingshixun.gather.CollectionBean">
+		<property name="map">
+			<map>
+				<entry key="name" value="王五"></entry>
+				<entry key-ref="dog1" value-ref="dog2"></entry>
+			</map>
+		</property>
+	</bean>
+		
+	<bean name="props" class="com.qingshixun.gather.CollectionBean">
+		<property name="props">
+			<props>
+				<prop key="username">root</prop>
+				<prop key="password">123456</prop>
+			</props>
+		</property>
+	</bean> -->
+	
+</beans>

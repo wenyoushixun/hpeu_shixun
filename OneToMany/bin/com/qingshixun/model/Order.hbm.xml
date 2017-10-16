@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.qingshixun.model.Order" table="t_order">
+        <!-- 主键 id 的映射 -->
+        <id name="id" column="id">
+            <!-- 生成策略 -->
+            <generator class="identity"></generator>
+        </id>
+        
+        <!-- 属性的映射 -->
+        <property name="name" column="produceName"></property>
+        <property name="price"></property>
+        
+        <!-- 多对一
+            name:指的是描述 Order 类中的一的一方的属性名 private Customer customer 中的 customer
+            class：指的是一的一方的属性的类型 private Customer customer 中的 Customer
+            column：值的是一对多，在多的一方产生外键的名称
+         -->
+        <many-to-one name="customer" class="com.qingshixun.model.Customer" column="customer_id" cascade="save-update"></many-to-one>
+    </class>
+</hibernate-mapping>

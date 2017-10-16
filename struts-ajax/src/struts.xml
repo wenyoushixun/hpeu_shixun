@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="basicstruts" extends="struts-default,json-default">
+
+		<action name="ajaxAction" class="shixun.online.project.AjaxAction" method="ajaxAction">
+			<result name="success" type="json"></result>
+		</action>
+
+		<!-- <action name="login" class="com.shixun.online.project.AjaxAction"
+			method="ajaxAction">
+			<result name="success">login.jsp</result>
+		</action> -->
+	</package>
+</struts>

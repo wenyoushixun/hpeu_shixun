@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.qingshixun.model.Customer" table="t_customer">
+        <!-- 主键 id 的映射 -->
+        <id name="id" column="id">
+            <!-- 生成策略 -->
+            <generator class="identity"></generator>
+        </id>
+        
+        <!-- 属性的映射 -->
+        <property name="name" column="customerName"></property>
+        
+        <!-- 一对多，name 指的是持有多的一方的属性名 -->
+        <set name="orders" inverse="true" cascade="save-update">
+            <!-- key 用来描述外键，column 指外键的字段名称，要与多的一方定义的外键名称一致 -->
+            <key column="customer_id"></key>
+            <!-- one-to-many 用来描述一对多关系，class 指的是多的一方的类型 -->
+            <one-to-many class="com.qingshixun.model.Order"/>
+        </set>
+        
+    </class>
+</hibernate-mapping>

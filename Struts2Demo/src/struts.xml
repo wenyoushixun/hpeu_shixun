@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!-- strict-method-invocation 表示是否要开启严格的方法验证
+          如果开启，就只能访问 allowed-methods（有通行证）的方法 -->
+	<package name="web" extends="struts-default" namespace="/" strict-method-invocation="false">
+        <!-- 针对动态调用和通配符的方法，发放通行证，在其中的方法可以正常访问 -->
+        <!-- <global-allowed-methods>addUser,deleteUser,updateUser</global-allowed-methods> -->
+        
+        <!-- 配置全局的结果跳转视图，如果 action 中返回 name 对应的字符串，就跳转到对应的 jsp -->
+        <global-results>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </global-results>
+        
+        <!-- 配置全局的异常处理，如果捕获 exception 对应的异常，就跳转到 result 对应的结果页面 -->
+        <global-exception-mappings>
+             <exception-mapping result="error" exception="Exception"></exception-mapping>
+        </global-exception-mappings>
+        
+
+        <action name="helloworld" class="com.shixun.online.action.HelloWorld" method="helloworld">
+            <result name="success">/WEB-INF/views/helloworld/helloworld.jsp</result>
+        </action>
+        
+        <action name="login" class="com.shixun.online.action.UserAction" method="login">
+            <result name="success">/WEB-INF/views/user/welcome.jsp</result>
+            <result name="fail">/WEB-INF/views/user/fail.jsp</result>
+            <!-- 在 package 全局中配置了这些内容，那么在 action 中可以直接使用，不需要再次配置 -->
+            <!-- <result name="error">/error.jsp</result> -->
+            <!-- 配置这个 action 出错的跳转页面 -->
+            <!-- <exception-mapping result="error" exception=" Exception"></exception-mapping> -->
+        </action>
+        
+        <!-- 当访问 xxForm 的时候，直接跳转到 xxForm.jsp 页面中 -->
+        <action name="*Form" >
+            <result>/WEB-INF/views/user/{1}Form.jsp</result>
+        </action>
+        
+        <action name="*User" class="com.shixun.online.action.UserAction" method="{1}User">
+            <result name="success">/WEB-INF/views/user/{1}.jsp</result>
+            <!-- 配置这个 action 使用通配符允许访问的方法 -->
+            <!-- <allowed-methods>addUser,deleteUser,updateUser,findUser</allowed-methods>-->
+        </action>
+        <!-- 
+        <action name="deleteUser" class="com.shixun.online.UserAction" method="deleteUser">
+            <result name="success">/delete.jsp</result>
+        </action>
+        
+        <action name="updateUser" class="com.shixun.online.UserAction" method="updateUser">
+            <result name="success">/update.jsp</result>
+        </action>
+        
+        <action name="findUser" class="com.shixun.online.UserAction" method="findUser">
+            <result name="success">/show.jsp</result>
+        </action>
+         -->
+	</package>
+</struts>

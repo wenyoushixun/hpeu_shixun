@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcatProjectProperties>
+    <rootDir>/src/main/webapp</rootDir>
+    <workDir>/work</workDir>
+    <exportSource>false</exportSource>
+    <reloadable>true</reloadable>
+    <redirectLogger>false</redirectLogger>
+    <updateXml>true</updateXml>
+    <warLocation></warLocation>
+    <extraInfo></extraInfo>
+    <webPath>/demo</webPath>
+    <webClassPathEntries>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/charsets.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext/cldrdata.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext/dnsns.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext/jaccess.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext/jfxrt.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext/localedata.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext/nashorn.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext/sunec.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext/zipfs.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jce.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jfr.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jsse.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/resources.jar</webClassPathEntry>
+        <webClassPathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar</webClassPathEntry>
+        <webClassPathEntry>/System/Library/Java/Extensions/MRJToolkit.jar</webClassPathEntry>
+        <webClassPathEntry>/Users/wenyou/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar</webClassPathEntry>
+        <webClassPathEntry>/Users/wenyou/.m2/repository/org/apache/tomcat/tomcat-servlet-api/8.5.20/tomcat-servlet-api-8.5.20.jar</webClassPathEntry>
+        <webClassPathEntry>/maven-demo-web/target/classes</webClassPathEntry>
+        <webClassPathEntry>/maven-demo-web/target/test-classes</webClassPathEntry>
+        <webClassPathEntry>org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER</webClassPathEntry>
+    </webClassPathEntries>
+</tomcatProjectProperties>
